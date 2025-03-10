@@ -38,7 +38,7 @@ if __name__ == "__main__":
 		for i in range(1, len(sys.argv),1):
 			if os.path.isdir(sys.argv[i]):
 				process_dir(sys.argv[i])
-			elif sys.argv[i][:-4] == ".pdf":
+			elif sys.argv[i][-4:] == ".pdf":
 				delete_prefix_pages(sys.argv[i], newName(sys.argv[i]))
 			else:
 				print("Input should be a pdf file or a folder containing pdf-s!")
